@@ -1,0 +1,48 @@
+{
+  "name": "tamagotchi-cli",
+  "version": "1.0.0",
+  "description": "A command-line based interactive game based on the '90s hit TAMAGOTCHI!!",
+  "main": "start.js",
+  "preferGlobal": true,
+  "bin": "./start.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register tests/**/*.test.ts",
+    "coverage": "nyc -r lcov -e .ts -x \"*.test.ts\" npm run test",
+    "start": "ts-node -- src/start.ts",
+    "docs": "typedoc --out docs"
+  },
+  "keywords": [
+    "tamagotchi",
+    "cmd",
+    "node.js",
+    "game"
+  ],
+  "author": "David Georgy",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "core-js": "^3.6.5",
+    "inquirer": "^7.2.0",
+    "node-persist": "^3.1.0",
+    "ora": "^4.0.4",
+    "typescript": "^3.9.5"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/chalk": "^2.2.0",
+    "@types/commander": "^2.12.2",
+    "@types/core-js": "^2.5.3",
+    "@types/inquirer": "^6.5.0",
+    "@types/mocha": "^7.0.2",
+    "@types/node-persist": "^3.0.0",
+    "@types/ora": "^3.2.0",
+    "@types/sinon": "^9.0.4",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "sinon": "^9.0.2",
+    "ts-node": "^8.10.2",
+    "typedoc": "^0.17.7"
+  }
+}
